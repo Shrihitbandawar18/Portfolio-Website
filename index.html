@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Shrihit Bandawar – Software Developer | Full Stack Developer | Data Analyst | Python Developer. Portfolio showcasing projects in AI/ML, web development, and data analytics." />
+  <meta name="keywords" content="Shrihit Bandawar, Software Developer, Full Stack Developer, Data Analyst, Python, React, Flask, Machine Learning" />
+  <meta name="author" content="Shrihit Bandawar" />
+  <meta property="og:title" content="Shrihit Bandawar – Software Developer & Data Analyst" />
+  <meta property="og:description" content="Portfolio of Shrihit Bandawar – Full Stack Developer, Data Analyst & Python Developer." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0a0a0f" />
+  <title>Shrihit Bandawar – Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark-mode" data-theme="dark">
+
+  <!-- Loading Screen -->
+  <div id="loader" class="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <div class="loader-logo">SB</div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Navbar -->
+  <header class="navbar" id="navbar" role="banner">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" aria-label="Shrihit Bandawar Home">
+        <span class="logo-bracket">&lt;</span>SB<span class="logo-bracket">/&gt;</span>
+      </a>
+      <nav class="nav-links" id="navLinks" role="navigation" aria-label="Main Navigation">
+        <a href="#home" class="nav-link active" data-section="home">Home</a>
+        <a href="#about" class="nav-link" data-section="about">About</a>
+        <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+        <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+        <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+        <a href="#achievements" class="nav-link" data-section="achievements">Achievements</a>
+        <a href="#resume" class="nav-link" data-section="resume">Resume</a>
+        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+          <span class="toggle-icon">☀</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero" aria-label="Hero">
+      <div class="hero-bg">
+        <div class="hero-grid"></div>
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+      </div>
+      <div class="hero-container">
+        <div class="hero-content reveal">
+          <div class="hero-badge">
+            <span class="badge-dot"></span>
+            Available for opportunities
+          </div>
+          <h1 class="hero-title">
+            Hi, I'm<br/>
+            <span class="hero-name">Shrihit<br/>Bandawar</span>
+          </h1>
+          <div class="hero-roles">
+            <span class="role-prefix">I build</span>
+            <span class="typed-text" id="typedText"></span>
+            <span class="typed-cursor">|</span>
+          </div>
+          <p class="hero-intro">
+            Engineering student passionate about building scalable applications, AI-powered solutions, and data-driven systems. I enjoy solving real-world problems through technology and continuously improving my skills in software development, machine learning, and analytics.
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+            <a href="Full_Stack_Resume.pdf" download class="btn btn-ghost" aria-label="Download Full Stack Resume">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Full Stack CV
+            </a>
+            <a href="Data_Analyst_Resume.pdf" download class="btn btn-ghost" aria-label="Download Data Analyst Resume">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Analyst CV
+            </a>
+          </div>
+          <div class="hero-socials">
+            <a href="https://github.com/Shrihitbandawar18" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/shrihit-bandawar-904671229/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://www.geeksforgeeks.org/user/shrihitbandawar/" target="_blank" rel="noopener" class="social-link" aria-label="GeeksforGeeks">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.45 14.315c-.143.28-.334.532-.565.745-.842.79-1.92 1.08-3.015 1.08-1.695 0-3.437-.73-4.28-2.31a.44.44 0 00-.775 0c-.844 1.58-2.585 2.31-4.28 2.31-1.093 0-2.172-.29-3.015-1.08a3.116 3.116 0 01-.565-.745C4.17 13.575 4 12.76 4 12c0-3.98 3.87-7.5 8-7.5s8 3.52 8 7.5c0 .76-.17 1.575-.55 2.315zM12 5.5c-3.44 0-7 2.985-7 6.5 0 .584.13 1.158.39 1.685.223.437.518.8.888 1.148.613.577 1.47.867 2.342.867 1.408 0 2.774-.65 3.38-1.837.12-.233.352-.373.612-.373.26 0 .492.14.612.373.606 1.187 1.972 1.837 3.38 1.837.873 0 1.73-.29 2.342-.867.37-.348.665-.71.888-1.148.26-.527.39-1.1.39-1.685 0-3.515-3.56-6.5-7-6.5z"/></svg>
+            </a>
+            <a href="https://leetcode.com/" target="_blank" rel="noopener" class="social-link" aria-label="LeetCode">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.116 6.226l-3.854 4.126a5.266 5.266 0 0 0-1.209 2.104 5.35 5.35 0 0 0-.125.513 5.527 5.527 0 0 0 .062 2.362 5.83 5.83 0 0 0 .349 1.017 5.938 5.938 0 0 0 1.271 1.818l4.277 4.193.039.038c2.248 2.165 5.852 2.133 8.063-.074l2.396-2.392c.54-.54.54-1.414.003-1.955a1.378 1.378 0 0 0-1.951-.003l-2.396 2.392a3.021 3.021 0 0 1-4.205.038l-.02-.019-4.276-4.193c-.652-.64-.972-1.469-.948-2.263a2.68 2.68 0 0 1 .066-.523 2.545 2.545 0 0 1 .619-1.164L9.13 8.114c1.058-1.134 3.204-1.27 4.43-.278l3.501 2.831c.593.48 1.461.387 1.94-.207a1.384 1.384 0 0 0-.207-1.943l-3.5-2.831c-.8-.647-1.766-1.045-2.774-1.202l2.015-2.158A1.384 1.384 0 0 0 13.483 0zm-2.866 12.815a1.38 1.38 0 0 0-1.38 1.382 1.38 1.38 0 0 0 1.38 1.382H20.79a1.38 1.38 0 0 0 1.38-1.382 1.38 1.38 0 0 0-1.38-1.382z"/></svg>
+            </a>
+            <a href="mailto:shrihitbandawar@gmail.com" class="social-link" aria-label="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="hero-visual reveal">
+          <div class="profile-frame">
+            <div class="profile-img-placeholder">
+              <div class="profile-initials">SB</div>
+              <div class="profile-ring ring-1"></div>
+              <div class="profile-ring ring-2"></div>
+            </div>
+            <div class="floating-card card-1">
+              <span class="fc-icon">⚡</span>
+              <span>Full Stack Dev</span>
+            </div>
+            <div class="floating-card card-2">
+              <span class="fc-icon">📊</span>
+              <span>Data Analyst</span>
+            </div>
+            <div class="floating-card card-3">
+              <span class="fc-icon">🤖</span>
+              <span>AI/ML</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section" aria-label="About">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Who I Am</span>
+          <h2 class="section-title">About Me</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p class="about-lead">Passionate and detail-oriented developer with hands-on experience building full-stack applications, Python automation, and data analytics pipelines.</p>
+            <p>Currently pursuing my Bachelor of Engineering in Electronics and Telecommunication at Sipna College of Engineering and Technology, Amravati (Expected 2026, CGPA: 7.25). I bring a multidisciplinary approach—spanning web development, machine learning, and business intelligence—to every project I take on.</p>
+            <p>My work is driven by a desire to solve real-world problems with scalable, maintainable solutions. Whether it's crafting a full-stack web app with React + Flask, training ML models for agriculture or recommendations, or creating Power BI dashboards for business decisions, I focus on impact.</p>
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <span class="highlight-num">10+</span>
+                <span class="highlight-label">Projects Built</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-num">5+</span>
+                <span class="highlight-label">Tech Domains</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-num">1</span>
+                <span class="highlight-label">Venture Founded</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-info reveal">
+            <div class="info-card glass">
+              <h3 class="info-card-title">Education</h3>
+              <div class="edu-item">
+                <div class="edu-icon">🎓</div>
+                <div class="edu-details">
+                  <strong>B.E. Electronics & Telecommunication</strong>
+                  <span>Sipna College of Engineering & Technology, Amravati</span>
+                  <span class="edu-meta">CGPA: 7.25 · Expected 2026</span>
+                </div>
+              </div>
+            </div>
+            <div class="info-card glass">
+              <h3 class="info-card-title">Focus Areas</h3>
+              <ul class="focus-list">
+                <li><span class="focus-dot"></span>Full Stack Development (React + Flask)</li>
+                <li><span class="focus-dot"></span>Python & Automation</li>
+                <li><span class="focus-dot"></span>AI / Machine Learning</li>
+                <li><span class="focus-dot"></span>Data Analytics & Power BI</li>
+                <li><span class="focus-dot"></span>Scalable System Architecture</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section" aria-label="Skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">What I Know</span>
+          <h2 class="section-title">Technical Skills</h2>
+        </div>
+        <div class="skills-grid">
+
+          <div class="skill-category reveal" data-category="Frontend">
+            <div class="skill-cat-header">
+              <span class="skill-cat-icon">🖥</span>
+              <h3>Frontend</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">HTML5</span>
+              <span class="skill-tag">CSS3</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">React</span>
+            </div>
+          </div>
+
+          <div class="skill-category reveal" data-category="Backend">
+            <div class="skill-cat-header">
+              <span class="skill-cat-icon">⚙️</span>
+              <h3>Backend</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Flask</span>
+              <span class="skill-tag">REST APIs</span>
+            </div>
+          </div>
+
+          <div class="skill-category reveal" data-category="Database">
+            <div class="skill-cat-header">
+              <span class="skill-cat-icon">🗄</span>
+              <h3>Database</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">SQL</span>
+              <span class="skill-tag">SQLite</span>
+              <span class="skill-tag">MySQL</span>
+            </div>
+          </div>
+
+          <div class="skill-category reveal" data-category="Analytics">
+            <div class="skill-cat-header">
+              <span class="skill-cat-icon">📊</span>
+              <h3>Data Analytics</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Power BI</span>
+              <span class="skill-tag">Excel</span>
+              <span class="skill-tag">Pandas</span>
+            </div>
+          </div>
+
+          <div class="skill-category reveal" data-category="AI/ML">
+            <div class="skill-cat-header">
+              <span class="skill-cat-icon">🤖</span>
+              <h3>AI / ML</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Machine Learning</span>
+              <span class="skill-tag">Data Analysis</span>
+              <span class="skill-tag">Recommendation Systems</span>
+            </div>
+          </div>
+
+          <div class="skill-category reveal" data-category="Tools">
+            <div class="skill-cat-header">
+              <span class="skill-cat-icon">🛠</span>
+              <h3>Tools</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">GitHub</span>
+              <span class="skill-tag">VS Code</span>
+              <span class="skill-tag">Netlify</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience section" aria-label="Experience">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Where I've Worked</span>
+          <h2 class="section-title">Experience</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass">
+              <div class="timeline-header">
+                <div>
+                  <h3 class="timeline-role">Python Developer Intern</h3>
+                  <span class="timeline-company">Cognifyz Technologies</span>
+                </div>
+                <span class="timeline-badge">Internship</span>
+              </div>
+              <ul class="timeline-list">
+                <li>Performed data analysis on real datasets using Python and Pandas</li>
+                <li>Developed automation scripts to streamline repetitive workflows</li>
+                <li>Built web scrapers for data collection and aggregation</li>
+                <li>Integrated MySQL databases for persistent data storage</li>
+                <li>Created data visualizations to communicate insights effectively</li>
+                <li>Contributed to Python development tasks across the full data pipeline</li>
+              </ul>
+              <div class="timeline-tech">
+                <span class="tech-chip">Python</span>
+                <span class="tech-chip">Pandas</span>
+                <span class="tech-chip">MySQL</span>
+                <span class="tech-chip">Web Scraping</span>
+                <span class="tech-chip">Data Visualization</span>
+                <span class="tech-chip">Automation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section" aria-label="Projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">What I've Built</span>
+          <h2 class="section-title">Projects</h2>
+        </div>
+
+        <!-- Filter -->
+        <div class="project-filters reveal" role="tablist" aria-label="Project categories">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+          <button class="filter-btn" data-filter="fullstack" role="tab" aria-selected="false">Full Stack</button>
+          <button class="filter-btn" data-filter="aiml" role="tab" aria-selected="false">AI / ML</button>
+          <button class="filter-btn" data-filter="analytics" role="tab" aria-selected="false">Analytics</button>
+          <button class="filter-btn" data-filter="freelance" role="tab" aria-selected="false">Freelance</button>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+
+          <!-- Full Stack Projects -->
+          <article class="project-card reveal" data-category="fullstack" aria-label="AI Career Assistant Project">
+            <div class="project-img-placeholder">
+              <span class="project-emoji">🤖</span>
+            </div>
+            <div class="project-body">
+              <div class="project-category-tag">Full Stack</div>
+              <h3 class="project-title">AI Career Assistant</h3>
+              <p class="project-desc">Intelligent career platform with resume analysis, ATS scoring, AI chatbot, career recommendations, and personalized roadmap generation.</p>
+              <div class="project-tech">
+                <span>React</span><span>Python</span><span>Flask</span><span>SQLite</span><span>REST API</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Shrihitbandawar18" target="_blank" rel="noopener" class="proj-btn proj-btn-gh">GitHub</a>
+                <span class="proj-btn proj-btn-demo coming-soon">Coming Soon</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="fullstack" aria-label="Interview Platform Project">
+            <div class="project-img-placeholder">
+              <span class="project-emoji">🎤</span>
+            </div>
+            <div class="project-body">
+              <div class="project-category-tag">Full Stack</div>
+              <h3 class="project-title">Interview Platform</h3>
+              <p class="project-desc">Comprehensive mock interview platform with candidate evaluation, question management, and performance tracking.</p>
+              <div class="project-tech">
+                <span>React</span><span>Flask</span><span>Python</span><span>SQL</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Shrihitbandawar18" target="_blank" rel="noopener" class="proj-btn proj-btn-gh">GitHub</a>
+                <span class="proj-btn proj-btn-demo coming-soon">Coming Soon</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="fullstack" aria-label="Swiggy Clone Project">
+            <div class="project-img-placeholder">
+              <span class="project-emoji">🍔</span>
+            </div>
+            <div class="project-body">
+              <div class="project-category-tag">Full Stack</div>
+              <h3 class="project-title">Swiggy Clone</h3>
+              <p class="project-desc">Feature-rich food ordering application with cart management, responsive UI, and seamless order flow.</p>
+              <div class="project-tech">
+                <span>React</span><span>JavaScript</span><span>CSS</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Shrihitbandawar18" target="_blank" rel="noopener" class="proj-btn proj-btn-gh">GitHub</a>
+                <span class="proj-btn proj-btn-demo coming-soon">Coming Soon</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="fullstack" aria-label="Interactive Frontend Experience">
+            <div class="project-img-placeholder">
+              <span class="project-emoji">✨</span>
+            </div>
+            <div class="project-body">
+              <div class="project-category-tag">Full Stack</div>
+              <h3 class="project-title">Interactive Frontend Experience</h3>
+              <p class="project-desc">A visually engaging, interactive frontend project showcasing modern web animations and dynamic UI patterns.</p>
+              <div class="project-tech">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Shrihitbandawar18/Interactive-Frontend-Experience" target="_blank" rel="noopener" class="proj-btn proj-btn-gh">GitHub</a>
+                <span class="proj-btn proj-btn-demo coming-soon">Coming Soon</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="fullstack" aria-label="Attendify Admin">
+            <div class="project-img-placeholder">
+              <span class="project-emoji">📋</span>
+            </div>
+            <div class="project-body">
+              <div class="project-category-tag">Full Stack</div>
+              <h3 class="project-title">Attendify Admin</h3>
+              <p class="project-desc">Admin dashboard for attendance management with role-based access, reporting, and data export capabilities.</p>
+              <div class="project-tech">
+                <span>React</span><span>JavaScript</span><span>CSS</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Shrihitbandawar18/attendify-admin-62" target="_blank" rel="noopener" class="proj-btn proj-btn-gh">GitHub</a>
+                <span class="proj-btn proj-btn-demo coming-soon">Coming Soon</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="fullstack" aria-label="Dine Route Dynamics">
+            <div class="project-img-placeholder">
+              <span class="project-emoji">🗺</span>
+            </div>
+            <div class="project-body">
+              <div class="project-category-tag">Full Stack</div>
+              <h3 class="project-title">Dine Route Dynamics</h3>
+              <p class="project-desc">Restaurant route optimization and discovery platform with dynamic filtering and location-based recommendations.</p>
+              <div class="project-tech">
+                <span>JavaScript</span><span>HTML</span><span>CSS</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Shrihitbandawar18/dine-route-dynamics" target="_blank" rel="noopener" class="proj-btn proj-btn-gh">GitHub</a>
+                <span class="proj-btn proj-btn-demo coming-soon">Coming Soon</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- AI/ML Projects -->
+          <article class="project-card reveal" data-category="aiml" aria-label="Agriculture Model">
+            <div class="project-img-placeholder">
+              <span class="project-emoji">🌾</span>
+            </div>
+            <div class="project-body">
+              <div class="project-category-tag">AI / ML</div>
+              <h3 class="project-title">Agriculture Model for Sustainable Crop Planning</h3>
+              <p class="project-desc">ML-powered crop recommendation system using soil and climate data to optimize agricultural planning and sustainability.</p>
+              <div class="project-tech">
+                <span>Python</span><span>Scikit-learn</span><span>Pandas</span><span>ML</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Shrihitbandawar18/Agriculture-Model-for-Sustainable-Crop-Planning" target="_blank" rel="noopener" class="proj-btn proj-btn-gh">GitHub</a>
+                <span class="proj-btn proj-btn-demo coming-soon">Coming Soon</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="aiml" aria-label="Movie Recommendation System">
+            <div class="project-img-placeholder">
+              <span class="project-emoji">🎬</span>
+            </div>
+            <div class="project-body">
+              <div class="project-category-tag">AI / ML</div>
+              <h3 class="project-title">Movie Recommendation System</h3>
+              <p class="project-desc">Content-based recommendation engine with similarity analysis and user preference modeling for personalized movie suggestions.</p>
+              <div class="project-tech">
+                <span>Python</span><span>Pandas</span><span>NLP</span><span>Cosine Similarity</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Shrihitbandawar18/Movie-Recommendation-System" target="_blank" rel="noopener" class="proj-btn proj-btn-gh">GitHub</a>
+                <span class="proj-btn proj-btn-demo coming-soon">Coming Soon</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Analytics Projects -->
+          <article class="project-card reveal" data-category="analytics" aria-label="HR Analytics Dashboard">
+            <div class="project-img-placeholder">
+              <span class="project-emoji">👥</span>
+            </div>
+            <div class="project-body">
+              <div class="project-category-tag">Analytics</div>
+              <h3 class="project-title">HR Analytics Dashboard</h3>
+              <p class="project-desc">Power BI dashboard for employee insights, attrition analysis, and KPI tracking to support data-driven HR decisions.</p>
+              <div class="project-tech">
+                <span>Power BI</span><span>Excel</span><span>DAX</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Shrihitbandawar18" target="_blank" rel="noopener" class="proj-btn proj-btn-gh">GitHub</a>
+                <span class="proj-btn proj-btn-demo coming-soon">Coming Soon</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="analytics" aria-label="Banking Dashboard">
+            <div class="project-img-placeholder">
+              <span class="project-emoji">🏦</span>
+            </div>
+            <div class="project-body">
+              <div class="project-category-tag">Analytics</div>
+              <h3 class="project-title">Banking Dashboard</h3>
+              <p class="project-desc">Financial analytics dashboard tracking banking KPIs, performance metrics, and operational insights.</p>
+              <div class="project-tech">
+                <span>Power BI</span><span>Excel</span><span>SQL</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Shrihitbandawar18/Banking-Dashboard" target="_blank" rel="noopener" class="proj-btn proj-btn-gh">GitHub</a>
+                <span class="proj-btn proj-btn-demo coming-soon">Coming Soon</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-category="analytics" aria-label="Product Sales Dashboard">
+            <div class="project-img-placeholder">
+              <span class="project-emoji">📈</span>
+            </div>
+            <div class="project-body">
+              <div class="project-category-tag">Analytics</div>
+              <h3 class="project-title">Product Sales Performance Dashboard</h3>
+              <p class="project-desc">Revenue analysis dashboard with product performance tracking, sales trend visualization, and business intelligence reporting.</p>
+              <div class="project-tech">
+                <span>Power BI</span><span>Excel</span><span>DAX</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Shrihitbandawar18/Product-Sales-Performance-Dashboard" target="_blank" rel="noopener" class="proj-btn proj-btn-gh">GitHub</a>
+                <span class="proj-btn proj-btn-demo coming-soon">Coming Soon</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Freelance -->
+          <article class="project-card reveal" data-category="freelance" aria-label="Coffee Sales Dashboard">
+            <div class="project-img-placeholder">
+              <span class="project-emoji">☕</span>
+            </div>
+            <div class="project-body">
+              <div class="project-category-tag">Freelance</div>
+              <h3 class="project-title">Coffee Sales Dashboard</h3>
+              <p class="project-desc">Business intelligence dashboard for a coffee business with sales analytics, customer insights, and revenue trends.</p>
+              <div class="project-tech">
+                <span>Excel</span><span>Power BI</span><span>Data Analysis</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/Shrihitbandawar18" target="_blank" rel="noopener" class="proj-btn proj-btn-gh">GitHub</a>
+                <span class="proj-btn proj-btn-demo coming-soon">Coming Soon</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements section" aria-label="Achievements">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Milestones</span>
+          <h2 class="section-title">Achievements</h2>
+        </div>
+        <div class="achievement-featured reveal">
+          <div class="achievement-card glass">
+            <div class="achievement-icon-wrap">
+              <span class="achievement-icon">🚀</span>
+            </div>
+            <div class="achievement-content">
+              <div class="achievement-meta">
+                <span class="achievement-role">Founder & Product Strategist</span>
+                <span class="achievement-badge">Entrepreneurship</span>
+              </div>
+              <h3 class="achievement-title">HydroDefend Solutions</h3>
+              <p class="achievement-desc">
+                Founded HydroDefend Solutions, an early-stage venture focused on developing innovative and scalable technology-driven solutions. Responsible for product strategy, solution architecture, feasibility assessment, market research, and long-term roadmap planning. Leading the initiative from concept validation through future implementation with a focus on real-world impact and sustainable growth.
+              </p>
+              <div class="achievement-skills">
+                <span>Product Strategy</span>
+                <span>Solution Architecture</span>
+                <span>Market Research</span>
+                <span>Feasibility Analysis</span>
+                <span>Roadmap Planning</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume-section section" aria-label="Resume">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Download</span>
+          <h2 class="section-title">Resume</h2>
+          <p class="section-sub">Two tailored resumes for different opportunities. Download the one that fits the role.</p>
+        </div>
+        <div class="resume-grid">
+          <div class="resume-card glass reveal">
+            <div class="resume-card-icon">💻</div>
+            <h3>Full Stack Developer</h3>
+            <p>Showcases expertise in React, Flask, Python, REST APIs, databases, and end-to-end application development. Ideal for software engineering and full-stack roles.</p>
+            <ul class="resume-highlights">
+              <li>React + Flask Projects</li>
+              <li>Database Design (SQL/SQLite)</li>
+              <li>REST API Development</li>
+              <li>AI-powered Applications</li>
+            </ul>
+            <a href="Full_Stack_Resume.pdf" download class="btn btn-primary resume-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download Resume
+            </a>
+          </div>
+          <div class="resume-card glass reveal">
+            <div class="resume-card-icon">📊</div>
+            <h3>Data Analyst</h3>
+            <p>Highlights skills in Power BI, SQL, Python, Pandas, Excel, and dashboard design. Perfect for data analytics, business intelligence, and analyst positions.</p>
+            <ul class="resume-highlights">
+              <li>Power BI Dashboards</li>
+              <li>Python Data Analysis</li>
+              <li>SQL & Database Querying</li>
+              <li>Data Visualization</li>
+            </ul>
+            <a href="Data_Analyst_Resume.pdf" download class="btn btn-primary resume-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download Resume
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section" aria-label="Contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Let's Talk</span>
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-sub">I'm currently open to internships, full-time roles, and freelance projects. Let's connect.</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info reveal">
+            <div class="contact-info-item glass">
+              <span class="ci-icon">📧</span>
+              <div>
+                <span class="ci-label">Email</span>
+                <a href="mailto:shrihitbandawar@gmail.com" class="ci-value">shrihitbandawar@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-info-item glass">
+              <span class="ci-icon">📱</span>
+              <div>
+                <span class="ci-label">Phone</span>
+                <a href="tel:+919373452421" class="ci-value">+91 9373452421</a>
+              </div>
+            </div>
+            <div class="contact-info-item glass">
+              <span class="ci-icon">📍</span>
+              <div>
+                <span class="ci-label">Location</span>
+                <span class="ci-value">Amravati, Maharashtra, India</span>
+              </div>
+            </div>
+            <div class="contact-info-item glass">
+              <span class="ci-icon">🔗</span>
+              <div>
+                <span class="ci-label">GitHub</span>
+                <a href="https://github.com/Shrihitbandawar18" target="_blank" rel="noopener" class="ci-value">Shrihitbandawar18</a>
+              </div>
+            </div>
+          </div>
+          <form class="contact-form glass reveal" id="contactForm" novalidate aria-label="Contact Form">
+            <div class="form-group">
+              <label for="fname">Full Name</label>
+              <input type="text" id="fname" name="name" placeholder="Your full name" autocomplete="name" required />
+              <span class="form-error" id="nameError"></span>
+            </div>
+            <div class="form-group">
+              <label for="femail">Email Address</label>
+              <input type="email" id="femail" name="email" placeholder="your@email.com" autocomplete="email" required />
+              <span class="form-error" id="emailError"></span>
+            </div>
+            <div class="form-group">
+              <label for="fsubject">Subject</label>
+              <input type="text" id="fsubject" name="subject" placeholder="What's this about?" required />
+              <span class="form-error" id="subjectError"></span>
+            </div>
+            <div class="form-group">
+              <label for="fmessage">Message</label>
+              <textarea id="fmessage" name="message" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
+              <span class="form-error" id="messageError"></span>
+            </div>
+            <button type="submit" class="btn btn-primary form-submit" id="submitBtn">
+              <span class="btn-text">Send Message</span>
+              <svg class="btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+            <div class="form-success" id="formSuccess" role="alert" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <span class="footer-logo"><span class="logo-bracket">&lt;</span>SB<span class="logo-bracket">/&gt;</span></span>
+        <p>Shrihit Bandawar — Software Developer & Data Analyst</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer Navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer-socials">
+        <a href="https://github.com/Shrihitbandawar18" target="_blank" rel="noopener" aria-label="GitHub">GH</a>
+        <a href="https://www.linkedin.com/in/shrihit-bandawar-904671229/" target="_blank" rel="noopener" aria-label="LinkedIn">LI</a>
+        <a href="https://www.geeksforgeeks.org/user/shrihitbandawar/" target="_blank" rel="noopener" aria-label="GeeksforGeeks">GFG</a>
+        <a href="mailto:shrihitbandawar@gmail.com" aria-label="Email">✉</a>
+      </div>
+      <p class="footer-copy">© 2026 Shrihit Bandawar. Crafted with passion.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
