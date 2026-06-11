@@ -1,8 +1,8 @@
 # Shrihit Bandawar — Personal Portfolio
 
-A modern, production-ready personal portfolio website built with pure **HTML, CSS, and JavaScript** — no frameworks required.
+A modern, production-ready personal portfolio website built with pure **HTML, CSS, and JavaScript**.
 
-## ✨ Features
+## Features
 
 - **Dark / Light mode** with localStorage persistence
 - **Typing animation** in the hero section
@@ -17,7 +17,7 @@ A modern, production-ready personal portfolio website built with pure **HTML, CS
 - **SEO** meta tags + Open Graph
 - **Netlify & GitHub ready**
 
-## 📁 File Structure
+## File Structure
 
 ```
 portfolio/
@@ -29,7 +29,7 @@ portfolio/
 └── README.md
 ```
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Local Development
 Just open `index.html` in any browser — no build step needed.

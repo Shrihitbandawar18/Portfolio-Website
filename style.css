@@ -272,6 +272,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   display: flex; align-items: center; justify-content: center;
   box-shadow: 0 0 60px var(--accent-glow);
 }
+.profile-photo { width: 280px; height: 280px; border-radius: 50%; object-fit: cover; }
 .profile-initials {
   font-family: 'Syne', sans-serif; font-size: 4rem; font-weight: 800; color: #fff;
 }

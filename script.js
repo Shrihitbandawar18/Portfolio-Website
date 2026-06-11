@@ -178,6 +178,40 @@ function validateAll() {
   return checks.every(Boolean);
 }
 
+
+// ── FORM SUBMIT ───────────────
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  if (!validateAll()) return;
+
+  try {
+    const response = await fetch(
+      'https://formspree.io/f/xgobnean',
+      {
+        method: 'POST',
+        body: new FormData(form),
+        headers: {
+          Accept: 'application/json'
+        }
+      }
+    );
+
+    if (response.ok) {
+      formSuccess.textContent = 'Message sent successfully!';
+      formSuccess.style.color = '#22c55e';
+      form.reset();
+    } else {
+      formSuccess.textContent = 'Failed to send message.';
+      formSuccess.style.color = '#ef4444';
+    }
+  } catch (error) {
+    formSuccess.textContent = 'Something went wrong.';
+    formSuccess.style.color = '#ef4444';
+  }
+});
+
 // Live validation on blur
 ['fname', 'femail', 'fsubject', 'fmessage'].forEach(id => {
   const el = getField(id);
